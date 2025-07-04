@@ -50,11 +50,14 @@ python -m build
 
 The following command will require your API token,
 the token can only be view right after you create it, create a new token if needed.
-I store the token in [.pypi_api_token](.pypi_api_token), which is gitignored.
+The token usually stored in [.pypirc](.pypirc), which is gitignored.
 
 ```
 # for the first time if not installed
 # pip install twine
+
+# to avoid upload command ask API token every time
+# cp .pypirc /c/Users/$USERNAME/
 
 twine upload dist/*
 # Output is on:
